@@ -2,33 +2,42 @@ import Image from "next/image";
 
 const Footer = () => {
   return (
-    <footer className=" pt-8 space-y-3">
-      <div className="flex max-w-6xl mx-auto px-4 flex-col items-start justify-between gap-5 md:flex-row">
+    <footer className="pt-8 space-y-3">
+      <div className="flex max-w-6xl mx-auto px-4 flex-col items-center justify-between gap-8 md:gap-4 md:flex-row md:items-start">
         <Image
           src="/logo-imperio-footer.png"
           alt="logo Império das pikups"
           width={176}
           height={125}
         />
+
         <div className="space-y-3">
-          <h4 className="text-base text-white font-medium">Mapa do site</h4>
+          <h4 className="text-base text-white font-medium text-center md:text-center">
+            Mapa do site
+          </h4>
           <ul className="space-y-2">
-            <li className="text-sm cursor-pointer text-white">Início</li>
-            <li className="text-sm cursor-pointer text-white">
+            <li className="text-sm cursor-pointer text-white text-center md:text-center">
+              Início
+            </li>
+            <li className="text-sm cursor-pointer text-white text-center md:text-center">
               Nossa estrutura
             </li>
-            <li className="text-sm cursor-pointer text-white">Quem somos</li>
-            <li className="text-sm cursor-pointer text-white">Contato</li>
+            <li className="text-sm cursor-pointer text-white text-center md:text-center">
+              Quem somos
+            </li>
+            <li className="text-sm cursor-pointer text-white text-center md:text-center">
+              Contato
+            </li>
           </ul>
         </div>
 
         <div className=" max-w-[200px]">
-          <h4 className="text-base text-white pb-3 font-medium">
+          <h4 className="text-base text-white pb-3 font-medium text-center md:text-start">
             Onde estamos
           </h4>
           <a
             href=""
-            className="text-white text-sm break-words"
+            className="text-white text-sm break-words text-center md:text-start"
             target="_blank"
             rel="noopener noreferrer"
           >
@@ -38,11 +47,13 @@ const Footer = () => {
         </div>
 
         <div className="space-y-3">
-          <h4 className="text-base text-white font-medium">Atendimento</h4>
+          <h4 className="text-base text-white font-medium text-center md:text-start">
+            Atendimento
+          </h4>
           <div className="flex flex-col">
             <a
-              href=""
-              className="text-white text-sm"
+              href="tel:6232930302"
+              className="text-white text-sm text-center md:text-start"
               target="_blank"
               rel="noopener noreferrer"
             >
@@ -51,7 +62,7 @@ const Footer = () => {
 
             <a
               href=""
-              className="text-white pt-2 underline text-sm"
+              className="text-white pt-2 underline text-sm text-center md:text-start"
               target="_blank"
               rel="noopener noreferrer"
             >

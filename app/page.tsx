@@ -54,7 +54,7 @@ const SectionBannerHome = () => {
 
 const SectionOurStructure = () => {
   return (
-    <section className="py-8 spcae-y-2">
+    <section className="py-8 space-y-3">
       <h2 className="text-white text-2xl font-semibold text-center">
         Nossa estrutura
       </h2>
@@ -111,16 +111,18 @@ const SectoionAbout = () => {
           className="w-full mx-auto max-w-[500px] h-auto"
         />
         <div className="flex w-full mx-auto max-w-[500px] md:max-w-none flex-col items-start gap-3">
-          <h3 className="text-base text-color-yellow">Império das Picapes</h3>
-          <h2 className="text-white text-2xl font-semibold text-center ">
-            De Goiânia para o Brasil
-          </h2>
-          <Image
-            src="/icone-star.svg"
-            alt="icone estrelas"
-            width={152}
-            height={24}
-          />
+          <div>
+            <h3 className="text-base text-color-yellow">Império das Picapes</h3>
+            <h2 className="text-white text-2xl font-semibold">
+              De Goiânia para o Brasil
+            </h2>
+            <Image
+              src="/icone-star.svg"
+              alt="icone estrelas"
+              width={152}
+              height={24}
+            />
+          </div>
           <p className="text-sm text-gray-400">
             Maior empresa do segmento, criada em 08/2012 pelo empreendedor Kecio
             Duarte. Com sede em Goiânia - GO, o Império das Picapes se tornou
@@ -152,10 +154,12 @@ const SectionFounder = () => {
     <section className="px-4 py-8 bg-none md:bg-[url('/banner-foulder-d.webp')] bg-cover bg-center bg-no-repeat min-h-[600px]">
       <div className="max-w-6xl flex flex-col gap-5 mx-auto">
         <div className="flex w-full mx-auto max-w-[500px] flex-col items-start gap-3 md:mx-0">
-          <h3 className="text-base text-color-yellow">Fundador</h3>
-          <h2 className="text-white text-2xl font-semibold text-center ">
-            De feira livre ao Império das Picapes
-          </h2>
+          <div>
+            <h3 className="text-base text-color-yellow">Fundador</h3>
+            <h2 className="text-white text-2xl font-semibold">
+              De feira livre ao Império das Picapes
+            </h2>
+          </div>
           <p className="text-sm text-gray-400">
             Conhecido nas redes sociais como{" "}
             <span className="font-semibold">IMPERADOR</span>, Kecio Duarte é um
@@ -196,10 +200,12 @@ const SectionContact = () => {
     <section className="bg-color-yellow px-4 py-8">
       <div className="max-w-6xl mx-auto flex items-center gap-5">
         <div className="flex w-full mx-auto max-w-[500px] flex-col items-start gap-3 md:mx-0">
-          <h3 className="text-base text-black">Contato</h3>
-          <h2 className="text-black text-2xl font-semibold text-center ">
-            Vamos conversar?
-          </h2>
+          <div>
+            <h3 className="text-base text-black">Contato</h3>
+            <h2 className="text-black text-2xl font-semibold">
+              Vamos conversar?
+            </h2>
+          </div>
           <p className="text-sm text-black">
             Tire suas dúvidas, converse com nossos especialistas e descubra como
             podemos ajudar você a investir com segurança.

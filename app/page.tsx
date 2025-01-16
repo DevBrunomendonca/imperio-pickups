@@ -1,101 +1,230 @@
+import { ArrowRight, ArrowUpRight } from "lucide-react";
+import { Button } from "./_components/ui/button";
+import CardAbout from "./_components/card-about";
 import Image from "next/image";
 
-export default function Home() {
+const HomePage = () => {
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-semibold">
-              app/page.tsx
-            </code>
-            .
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
+    <>
+      <SectionBannerHome />
+      <SectionOurStructure />
+      <SectionCards />
+      <SectoionAbout />
+      <SectionFounder />
+      <SectionBannerStore />
+      <SectionContact />
+    </>
+  );
+};
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
+const SectionBannerHome = () => {
+  return (
+    <section className="bg-[url('/banner-home-m.webp')] h-[700px] bg-cover bg-no-repeat bg-center md:bg-[url('/banner-home-d.webp')]">
+      <div className="pt-[82px] max-w-6xl mx-auto  px-4  h-full ">
+        <div className="max-w-[586px] flex gap-3 items-start flex-col h-full justify-center">
+          <div className="flex py-1 px-2 border-[1px] rounded-sm border-color-yellow  items-center gap-2">
+            <p className="text-white text-sm">
+              Lucro, segurança e transparência
+            </p>
+            <ArrowRight color="#FECA49" />
+          </div>
+          <h1 className="text-4xl text-white font-semibold">
+            Receba 1,4% ao mês sobre seu investimento de forma segura e
+            transparente.
+          </h1>
+          <p className="text-gray-400">
+            Já imaginou ter seu investimento rendendo 1,4% ao mês, sem riscos?
+            Esta é a tranquilidade que vamos trazer para você.
+          </p>
           <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
+            className="w-full"
+            href=""
             target="_blank"
             rel="noopener noreferrer"
           >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:min-w-44"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
+            <Button className="w-full md:max-w-[320px] bg-color-yellow text-black">
+              Fale com um especialista <ArrowUpRight />
+            </Button>
           </a>
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
-    </div>
+      </div>
+    </section>
   );
-}
+};
+
+const SectionOurStructure = () => {
+  return (
+    <section className="py-8 spcae-y-2">
+      <h2 className="text-white text-2xl font-semibold text-center">
+        Nossa estrutura
+      </h2>
+      <div className="flex w-full items-center gap-4">
+        <div className="w-[300px] hidden  rounded-r-md  h-[300px] bg-color-yellow md:block"></div>
+        <iframe
+          className="border-0 px-4 w-full max-w-[1024px] min-h-[300px] md:min-h-[600px] rounded-md"
+          src="https://www.youtube.com/embed/Fe7h2iJbiGI?si=nfZTDlhnv37_Y8fV"
+          title="YouTube video player"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          allowFullScreen
+        ></iframe>
+        <div className="w-[300px] hidden  rounded-l-md  h-[300px] bg-color-yellow md:block"></div>
+      </div>
+    </section>
+  );
+};
+
+const SectionCards = () => {
+  return (
+    <section className="px-4 py-8">
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-5 max-w-6xl mx-auto">
+        <CardAbout
+          srcImg="/icone-attach-money.svg"
+          title="O que vamos fazer com seu dinheiro?"
+          content="Vamos trabalhar seu investimento de forma inteligente dentro do nosso próprio ecossistema, onde faturamos múltiplos dígitos mensalmente."
+        />
+        <CardAbout
+          srcImg="/icone-currency-exchange.svg"
+          title="Como faremos isso?"
+          content="Com nossa comunidade de mais de 2 mil pagamentos mensais, prontos para comprar nossos produtos e veículos."
+        />
+        <CardAbout
+          srcImg="/icone-payments.svg"
+          title="Qual a segurança?"
+          content="Nossa negociação não é com o consumidor final, mas sim com as concessionárias parceiras, ou seja, risco zero, pois os veículos ficam em nossa posse, sem margem para prejuízos."
+        />
+      </div>
+    </section>
+  );
+};
+
+const SectoionAbout = () => {
+  return (
+    <section className="px-4 py-8">
+      <div className="flex max-w-6xl mx-auto flex-col gap-5 items-start md:flex-row md:items-center">
+        <Image
+          src="/banner.png"
+          alt="banner mostrando um celuar no instagram"
+          width={0}
+          height={0}
+          sizes="100vh"
+          quality={100}
+          className="w-full mx-auto max-w-[500px] h-auto"
+        />
+        <div className="flex w-full mx-auto max-w-[500px] md:max-w-none flex-col items-start gap-3">
+          <h3 className="text-base text-color-yellow">Império das Picapes</h3>
+          <h2 className="text-white text-2xl font-semibold text-center ">
+            De Goiânia para o Brasil
+          </h2>
+          <Image
+            src="/icone-star.svg"
+            alt="icone estrelas"
+            width={152}
+            height={24}
+          />
+          <p className="text-sm text-gray-400">
+            Maior empresa do segmento, criada em 08/2012 pelo empreendedor Kecio
+            Duarte. Com sede em Goiânia - GO, o Império das Picapes se tornou
+            uma referência nacional em customização de picapes de grande porte,
+            com faturamento de múltiplos dígitos mensalmente. Sempre pensando em
+            expansão, invadiu o mercado digital e hoje, somando todas as suas
+            redes sociais, gerou o número fantástico de mais de 800 mil
+            seguidores, vendendo para todo o território brasileiro com um ROI de
+            2x.
+          </p>
+          <a
+            className="w-full"
+            href=""
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <Button className="w-full sm:max-w-[320px] bg-color-yellow text-black">
+              Fale com um especialista <ArrowUpRight />
+            </Button>
+          </a>
+        </div>
+      </div>
+    </section>
+  );
+};
+
+const SectionFounder = () => {
+  return (
+    <section className="px-4 py-8 bg-none md:bg-[url('/banner-foulder-d.webp')] bg-cover bg-center bg-no-repeat min-h-[600px]">
+      <div className="max-w-6xl flex flex-col gap-5 mx-auto">
+        <div className="flex w-full mx-auto max-w-[500px] flex-col items-start gap-3 md:mx-0">
+          <h3 className="text-base text-color-yellow">Fundador</h3>
+          <h2 className="text-white text-2xl font-semibold text-center ">
+            De feira livre ao Império das Picapes
+          </h2>
+          <p className="text-sm text-gray-400">
+            Conhecido nas redes sociais como{" "}
+            <span className="font-semibold">IMPERADOR</span>, Kecio Duarte é um
+            empreendedor nato, com mais de 27 anos de experiência. Começou sua
+            carreira vendendo refrigerantes nas feiras livres da cidade de
+            Goiânia aos 8 anos de idade. Hoje, ele criou seu próprio império,
+            com poder de compra e venda em todo o território nacional,
+            tornando-se a maior referência no Brasil em customização de picapes.
+            Aos 35 anos, conta com empresas físicas e digitais, mais de 2 mil
+            assinantes recorrentes em seus projetos digitais e mais de 450 mil
+            seguidores em uma de suas redes sociais.
+          </p>
+          <a
+            className="w-full"
+            href=""
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <Button className="w-full sm:max-w-[320px] bg-color-yellow text-black">
+              Fale com um especialista <ArrowUpRight />
+            </Button>
+          </a>
+        </div>
+        <div className="block rounded-md w-full bg-[url('/banner-foulder-m.webp')] mx-auto max-w-[500px]  bg-cover bg-center bg-no-repeat min-h-[400px] md:hidden"></div>
+      </div>
+    </section>
+  );
+};
+
+const SectionBannerStore = () => {
+  return (
+    <section className="bg-[url('/banner-loja-m.webp')] md:bg-[url('/banner-loja.webp')] bg-cover bg-center bg-no-repeat min-h-[250px] md:min-h-[400px]"></section>
+  );
+};
+
+const SectionContact = () => {
+  return (
+    <section className="bg-color-yellow px-4 py-8">
+      <div className="max-w-6xl mx-auto flex items-center gap-5">
+        <div className="flex w-full mx-auto max-w-[500px] flex-col items-start gap-3 md:mx-0">
+          <h3 className="text-base text-black">Contato</h3>
+          <h2 className="text-black text-2xl font-semibold text-center ">
+            Vamos conversar?
+          </h2>
+          <p className="text-sm text-black">
+            Tire suas dúvidas, converse com nossos especialistas e descubra como
+            podemos ajudar você a investir com segurança.
+          </p>
+          <a
+            className="w-full"
+            href=""
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <Button className="w-full sm:max-w-[320px] bg-black text-color-yellow">
+              Fale com um especialista <ArrowUpRight />
+            </Button>
+          </a>
+        </div>
+        <Image
+          src="/icone-grande-wtpp.webp"
+          alt="Icone grande WhatsApp"
+          width={415}
+          height={432}
+          className="hidden md:block"
+        />
+      </div>
+    </section>
+  );
+};
+
+export default HomePage;

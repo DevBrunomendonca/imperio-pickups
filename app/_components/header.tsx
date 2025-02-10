@@ -1,3 +1,5 @@
+"use client";
+
 import { AlignJustify, X } from "lucide-react";
 import {
   Sheet,
@@ -10,8 +12,28 @@ import {
 } from "./ui/sheet";
 import { Button } from "./ui/button";
 import Logo from "./logo";
+import { useCallback, useEffect, useState } from "react";
 
 const Header = () => {
+  const [sheetIsOpen, setSheetIsOpen] = useState<boolean>(false);
+
+  const handleResize = useCallback(() => {
+    // eslint-disable-next-line @typescript-eslint/no-unused-expressions
+    window.innerWidth > 768 && setSheetIsOpen(false);
+  }, []);
+
+  useEffect(() => {
+    handleResize();
+    window.addEventListener("resize", handleResize);
+    return () => {
+      window.addEventListener("resize", handleResize);
+    };
+  }, [handleResize]);
+
+  const handleCloseSheet = () => {
+    setSheetIsOpen(false);
+  };
+
   return (
     <header
       style={{
@@ -25,26 +47,41 @@ const Header = () => {
 
         <nav className="md:flex hidden  max-w-6xl gap-3 mx-auto justify-center w-full">
           <ul className="flex items-center justify-center gap-5">
-            <li className="text-sm text-white cursor-pointer hover:text-color-yellow duration-500 ease-in-out font-medium">
-              Início
-            </li>
-            <li className="text-sm text-white cursor-pointer hover:text-color-yellow duration-500 ease-in-out font-medium">
-              Nossa estrutura
-            </li>
-            <li className="text-sm text-white cursor-pointer hover:text-color-yellow duration-500 ease-in-out font-medium">
-              Quem somos
-            </li>
-            <li className="text-sm text-white cursor-pointer hover:text-color-yellow duration-500 ease-in-out font-medium">
-              Contato
-            </li>
+            <a href="#home">
+              <li className="text-sm text-white cursor-pointer hover:text-color-yellow duration-500 ease-in-out font-medium">
+                Início
+              </li>
+            </a>
+            <a href="#our-structure">
+              <li className="text-sm text-white cursor-pointer hover:text-color-yellow duration-500 ease-in-out font-medium">
+                Nossa estrutura
+              </li>
+            </a>
+            <a href="#about-us">
+              <li className="text-sm text-white cursor-pointer hover:text-color-yellow duration-500 ease-in-out font-medium">
+                Quem somos
+              </li>
+            </a>
+            <a href="#contact">
+              <li className="text-sm text-white cursor-pointer hover:text-color-yellow duration-500 ease-in-out font-medium">
+                Contato
+              </li>
+            </a>
           </ul>
         </nav>
-        <Button className="hidden text-black bg-color-yellow md:block">
-          Fale com um especialista
-        </Button>
+
+        <a
+          href="https://wa.link/l7gq41"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <Button className="hidden text-black bg-color-yellow md:block">
+            Fale com um especialista
+          </Button>
+        </a>
 
         <div className="block md:hidden">
-          <Sheet>
+          <Sheet open={sheetIsOpen} onOpenChange={setSheetIsOpen}>
             <SheetTrigger className="bg-black" asChild>
               <Button className="block md:hidden">
                 <AlignJustify color="#FECA49" />
@@ -56,7 +93,7 @@ const Header = () => {
                   <Logo />
                   <SheetClose asChild>
                     <Button>
-                      <X color="#FECA49" />
+                      <X onClick={handleCloseSheet} color="#FECA49" />
                     </Button>
                   </SheetClose>
                 </SheetTitle>
@@ -64,18 +101,26 @@ const Header = () => {
               <SheetFooter className="flex h-full flex-col gap-5">
                 <nav className="flex h-full flex-col  max-w-6xl gap-3 mx-auto justify-center w-full">
                   <ul className="flex h-full flex-col items-center justify-start pt-40 gap-8">
-                    <li className="text-white text-lg cursor-pointer hover:text-color-yellow duration-500 ease-in-out font-medium">
-                      Início
-                    </li>
-                    <li className="text-white text-lg  cursor-pointer hover:text-color-yellow duration-500 ease-in-out font-medium">
-                      Nossa estrutura
-                    </li>
-                    <li className=" text-white text-lg  cursor-pointer hover:text-color-yellow duration-500 ease-in-out font-medium">
-                      Quem somos
-                    </li>
-                    <li className="text-white text-lg  cursor-pointer hover:text-color-yellow duration-500 ease-in-out font-medium">
-                      Contato
-                    </li>
+                    <a onClick={handleCloseSheet} href="#home">
+                      <li className="text-white text-lg cursor-pointer hover:text-color-yellow duration-500 ease-in-out font-medium">
+                        Início
+                      </li>
+                    </a>
+                    <a onClick={handleCloseSheet} href="#our-structure">
+                      <li className="text-white text-lg  cursor-pointer hover:text-color-yellow duration-500 ease-in-out font-medium">
+                        Nossa estrutura
+                      </li>
+                    </a>
+                    <a onClick={handleCloseSheet} href="#about-us">
+                      <li className=" text-white text-lg  cursor-pointer hover:text-color-yellow duration-500 ease-in-out font-medium">
+                        Quem somos
+                      </li>
+                    </a>
+                    <a onClick={handleCloseSheet} href="#contact">
+                      <li className="text-white text-lg  cursor-pointer hover:text-color-yellow duration-500 ease-in-out font-medium">
+                        Contato
+                      </li>
+                    </a>
                   </ul>
                 </nav>
               </SheetFooter>

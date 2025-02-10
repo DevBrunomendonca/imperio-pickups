@@ -19,7 +19,10 @@ const HomePage = () => {
 
 const SectionBannerHome = () => {
   return (
-    <section className="bg-[url('/banner-home-m.webp')] h-[700px] bg-cover bg-no-repeat bg-center md:bg-[url('/banner-home-d.webp')]">
+    <section
+      id="home"
+      className="bg-[url('/banner-home-m.webp')] h-[700px] bg-cover bg-no-repeat bg-center md:bg-[url('/banner-home-d.webp')]"
+    >
       <div className="pt-[82px] max-w-6xl mx-auto  px-4  h-full ">
         <div className="max-w-[586px] flex gap-3 items-start flex-col h-full justify-center">
           <div className="flex py-1 px-2 border-[1px] rounded-sm border-color-yellow  items-center gap-2">
@@ -38,7 +41,7 @@ const SectionBannerHome = () => {
           </p>
           <a
             className="w-full"
-            href=""
+            href="https://wa.link/l7gq41"
             target="_blank"
             rel="noopener noreferrer"
           >
@@ -54,20 +57,20 @@ const SectionBannerHome = () => {
 
 const SectionOurStructure = () => {
   return (
-    <section className="py-8 space-y-3">
+    <section id="our-structure" className="py-8 space-y-3">
       <h2 className="text-white text-2xl font-semibold text-center">
         Nossa estrutura
       </h2>
       <div className="flex w-full items-center gap-4">
-        <div className="w-[300px] hidden  rounded-r-md  h-[300px] bg-color-yellow md:block"></div>
+        <div className="w-full hidden  rounded-r-md  h-[300px] bg-color-yellow lg:block"></div>
         <iframe
-          className="border-0 px-4 w-full max-w-[1024px] min-h-[300px] md:min-h-[600px] rounded-md"
+          className="border-0 px-4 w-full min-h-[300px] md:min-h-[600px] rounded-[30px] md:min-w-[800px] xl:min-w-[1200px]"
           src="https://www.youtube.com/embed/Fe7h2iJbiGI?si=nfZTDlhnv37_Y8fV"
           title="YouTube video player"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
           allowFullScreen
         ></iframe>
-        <div className="w-[300px] hidden  rounded-l-md  h-[300px] bg-color-yellow md:block"></div>
+        <div className="w-full hidden  rounded-l-md  h-[300px] bg-color-yellow lg:block"></div>
       </div>
     </section>
   );
@@ -99,7 +102,7 @@ const SectionCards = () => {
 
 const SectoionAbout = () => {
   return (
-    <section className="px-4 py-8">
+    <section id="about-us" className="px-4 py-8">
       <div className="flex max-w-6xl mx-auto flex-col gap-5 items-start md:flex-row md:items-center">
         <Image
           src="/banner.png"
@@ -135,7 +138,7 @@ const SectoionAbout = () => {
           </p>
           <a
             className="w-full"
-            href=""
+            href="https://wa.link/l7gq41"
             target="_blank"
             rel="noopener noreferrer"
           >
@@ -174,7 +177,7 @@ const SectionFounder = () => {
           </p>
           <a
             className="w-full"
-            href=""
+            href="https://wa.link/l7gq41"
             target="_blank"
             rel="noopener noreferrer"
           >
@@ -197,7 +200,7 @@ const SectionBannerStore = () => {
 
 const SectionContact = () => {
   return (
-    <section className="bg-color-yellow px-4 py-8">
+    <section id="contact" className="bg-color-yellow px-4 py-8">
       <div className="max-w-6xl mx-auto flex items-center gap-5">
         <div className="flex w-full mx-auto max-w-[500px] flex-col items-start gap-3 md:mx-0">
           <div>
@@ -212,7 +215,7 @@ const SectionContact = () => {
           </p>
           <a
             className="w-full"
-            href=""
+            href="https://wa.link/l7gq41"
             target="_blank"
             rel="noopener noreferrer"
           >

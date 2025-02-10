@@ -16,18 +16,26 @@ const Footer = () => {
             Mapa do site
           </h4>
           <ul className="space-y-2">
-            <li className="text-sm cursor-pointer text-white text-center md:text-center">
-              Início
-            </li>
-            <li className="text-sm cursor-pointer text-white text-center md:text-center">
-              Nossa estrutura
-            </li>
-            <li className="text-sm cursor-pointer text-white text-center md:text-center">
-              Quem somos
-            </li>
-            <li className="text-sm cursor-pointer text-white text-center md:text-center">
-              Contato
-            </li>
+            <a href="#home">
+              <li className="text-sm text-center text-white md:text-start">
+                Início
+              </li>
+            </a>
+            <a href="#our-structure">
+              <li className="text-sm text-center text-white md:text-start">
+                Nossa estrutura
+              </li>
+            </a>
+            <a href="#about-us">
+              <li className="text-sm text-center text-white md:text-start">
+                Quem somos
+              </li>
+            </a>
+            <a href="#contact">
+              <li className="text-sm text-center text-white md:text-start">
+                Contato
+              </li>
+            </a>
           </ul>
         </div>
 
@@ -36,7 +44,7 @@ const Footer = () => {
             Onde estamos
           </h4>
           <a
-            href=""
+            href="https://maps.app.goo.gl/48ktjSUcNiYRU5TQ9"
             className="text-white text-sm break-words text-center md:text-start"
             target="_blank"
             rel="noopener noreferrer"

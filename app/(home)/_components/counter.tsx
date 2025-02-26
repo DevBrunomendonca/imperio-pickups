@@ -1,7 +1,9 @@
+"use client";
+
 import {
   CouterPros,
   useAnimationCounter,
-} from "../_hooks/use-animation-statistics";
+} from "../../_hooks/use-animation-statistics";
 
 const Counter = ({ endValue, start, className }: CouterPros) => {
   const { count } = useAnimationCounter({ endValue, start });

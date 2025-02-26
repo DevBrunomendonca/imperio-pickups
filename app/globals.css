@@ -70,3 +70,9 @@ body {
     @apply bg-black text-foreground;
   }
 }
+.swiper-button-prev::after,
+.swiper-button-next::after {
+  font-size: 1.6rem !important;
+  font-weight: 600;
+  color: #feca49;
+}

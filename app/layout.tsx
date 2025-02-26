@@ -4,6 +4,11 @@ import "./globals.css";
 import Header from "./_components/header";
 import Footer from "./_components/footer";
 
+import { register } from "swiper/element/bundle";
+register();
+import "swiper/css";
+import "swiper/css/navigation";
+
 const poppins = Poppins({
   subsets: ["latin"],
   weight: ["400", "500", "600", "700"],

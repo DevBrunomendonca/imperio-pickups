@@ -6,7 +6,7 @@ interface CardAboutProps {
   content: string;
 }
 
-const CardAbout = ({ srcImg, title, content }: CardAboutProps) => {
+const CardAboutInvestments = ({ srcImg, title, content }: CardAboutProps) => {
   return (
     <div className="flex mx-auto max-w-[385px] cursor-pointer p-3 rounded-md bg-[#080D10] flex-col gap-2 ease-in-out duration-500 hover:md:scale-105 ">
       <Image src={srcImg} alt={`icone card ${title}`} width={60} height={60} />
@@ -16,4 +16,4 @@ const CardAbout = ({ srcImg, title, content }: CardAboutProps) => {
   );
 };
 
-export default CardAbout;
+export default CardAboutInvestments;

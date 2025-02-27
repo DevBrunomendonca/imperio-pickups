@@ -1,6 +1,7 @@
 "use client";
 
-import { AlignJustify, X } from "lucide-react";
+import Logo from "@/app/_components/logo";
+import { Button } from "@/app/_components/ui/button";
 import {
   Sheet,
   SheetClose,
@@ -9,17 +10,16 @@ import {
   SheetHeader,
   SheetTitle,
   SheetTrigger,
-} from "./ui/sheet";
-import { Button } from "./ui/button";
-import Logo from "./logo";
+} from "@/app/_components/ui/sheet";
+import { AlignJustify, X } from "lucide-react";
+
 import { useCallback, useEffect, useState } from "react";
 
 const Header = () => {
   const [sheetIsOpen, setSheetIsOpen] = useState<boolean>(false);
 
   const handleResize = useCallback(() => {
-    // eslint-disable-next-line @typescript-eslint/no-unused-expressions
-    window.innerWidth > 768 && setSheetIsOpen(false);
+    setSheetIsOpen(window.innerWidth > 768 && false);
   }, []);
 
   useEffect(() => {
@@ -40,7 +40,7 @@ const Header = () => {
         backdropFilter: "blur(20px)",
         WebkitBackdropFilter: "blur(20px)",
       }}
-      className="fixed flex justify-between top-0 left-0 py-2 px-4 w-full bg-black bg-opacity-60"
+      className="fixed z-50 flex justify-between top-0 left-0 py-2 px-4 w-full bg-black bg-opacity-60"
     >
       <div className="flex w-full gap-4 items-center justify-between max-w-6xl mx-auto">
         <Logo />
@@ -52,16 +52,17 @@ const Header = () => {
                 Início
               </li>
             </a>
-            <a href="#our-structure">
-              <li className="text-sm text-white cursor-pointer hover:text-color-yellow duration-500 ease-in-out font-medium">
-                Nossa estrutura
-              </li>
-            </a>
             <a href="#about-us">
               <li className="text-sm text-white cursor-pointer hover:text-color-yellow duration-500 ease-in-out font-medium">
                 Quem somos
               </li>
             </a>
+            <a href="#gallery">
+              <li className="text-sm text-white cursor-pointer hover:text-color-yellow duration-500 ease-in-out font-medium">
+                Galeria
+              </li>
+            </a>
+
             <a href="#contact">
               <li className="text-sm text-white cursor-pointer hover:text-color-yellow duration-500 ease-in-out font-medium">
                 Contato
@@ -106,14 +107,14 @@ const Header = () => {
                         Início
                       </li>
                     </a>
-                    <a onClick={handleCloseSheet} href="#our-structure">
-                      <li className="text-white text-lg  cursor-pointer hover:text-color-yellow duration-500 ease-in-out font-medium">
-                        Nossa estrutura
-                      </li>
-                    </a>
                     <a onClick={handleCloseSheet} href="#about-us">
                       <li className=" text-white text-lg  cursor-pointer hover:text-color-yellow duration-500 ease-in-out font-medium">
                         Quem somos
+                      </li>
+                    </a>
+                    <a onClick={handleCloseSheet} href="#gallery">
+                      <li className="text-white text-lg  cursor-pointer hover:text-color-yellow duration-500 ease-in-out font-medium">
+                        Galeria
                       </li>
                     </a>
                     <a onClick={handleCloseSheet} href="#contact">

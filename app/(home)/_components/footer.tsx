@@ -15,15 +15,10 @@ const Footer = () => {
           <h4 className="text-base text-white font-medium text-center md:text-center">
             Mapa do site
           </h4>
-          <ul className="space-y-2">
+          <ul className="flex flex-col items-start gap-2">
             <a href="#home">
               <li className="text-sm text-center text-white md:text-start">
                 Início
-              </li>
-            </a>
-            <a href="#our-structure">
-              <li className="text-sm text-center text-white md:text-start">
-                Nossa estrutura
               </li>
             </a>
             <a href="#about-us">
@@ -31,6 +26,13 @@ const Footer = () => {
                 Quem somos
               </li>
             </a>
+
+            <a href="#gallery">
+              <li className="text-sm text-center text-white md:text-start">
+                Galeria
+              </li>
+            </a>
+
             <a href="#contact">
               <li className="text-sm text-center text-white md:text-start">
                 Contato
@@ -67,9 +69,8 @@ const Footer = () => {
             >
               (62) 3293-0302
             </a>
-
             <a
-              href=""
+              href="/"
               className="text-white pt-2 underline text-sm text-center md:text-start"
               target="_blank"
               rel="noopener noreferrer"

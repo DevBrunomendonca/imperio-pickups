@@ -5,7 +5,7 @@ const Logo = () => {
   return (
     <Link href="/">
       <Image
-        src="/logo-imperio.png"
+        src="/logo/logo-imperio-horizontal.png"
         alt="Logo império das pickups"
         width={245}
         height={65}

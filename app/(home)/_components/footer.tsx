@@ -5,7 +5,7 @@ const Footer = () => {
     <footer className="pt-8 space-y-3">
       <div className="flex max-w-6xl mx-auto px-4 flex-col items-center justify-between gap-8 md:gap-4 md:flex-row md:items-start">
         <Image
-          src="/logo-imperio-footer.png"
+          src="/logo/logo-imperio-vertical.png"
           alt="logo Império das pikups"
           width={176}
           height={125}

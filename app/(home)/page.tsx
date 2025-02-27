@@ -338,7 +338,7 @@ const SectionContact = () => {
           </a>
         </div>
         <Image
-          src="/icone-grande-wtpp.webp"
+          src="/icons/icone-grande-wtpp.webp"
           alt="Icone grande WhatsApp"
           width={415}
           height={432}

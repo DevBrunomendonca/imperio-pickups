@@ -47,7 +47,7 @@ const SectionBannerHome = () => {
           </p>
           <a
             className="w-full"
-            href="https://wa.link/l7gq41"
+            href="https://wa.link/obswin"
             target="_blank"
             rel="noopener noreferrer"
           >
@@ -118,7 +118,7 @@ const SectionAboutPersonalization = () => {
           />
           <a
             className="w-full"
-            href="https://wa.link/l7gq41"
+            href="https://wa.link/obswin"
             target="_blank"
             rel="noopener noreferrer"
           >
@@ -180,7 +180,7 @@ const SectionPersonalization = () => {
           </p>
           <a
             className="w-full"
-            href="https://wa.link/l7gq41"
+            href="https://wa.link/obswin"
             target="_blank"
             rel="noopener noreferrer"
           >
@@ -221,7 +221,7 @@ const SectionDocumentation = () => {
           </p>
           <a
             className="w-full"
-            href="https://wa.link/l7gq41"
+            href="https://wa.link/obswin"
             target="_blank"
             rel="noopener noreferrer"
           >
@@ -248,7 +248,7 @@ const SectionDelivery = () => {
           </p>
           <a
             className="w-full"
-            href="https://wa.link/l7gq41"
+            href="https://wa.link/obswin"
             target="_blank"
             rel="noopener noreferrer"
           >
@@ -290,7 +290,7 @@ const SectionFounder = () => {
           </p>
           <a
             className="w-full"
-            href="https://wa.link/l7gq41"
+            href="https://wa.link/obswin"
             target="_blank"
             rel="noopener noreferrer"
           >
@@ -328,7 +328,7 @@ const SectionContact = () => {
           </p>
           <a
             className="w-full"
-            href="https://wa.link/l7gq41"
+            href="https://wa.link/obswin"
             target="_blank"
             rel="noopener noreferrer"
           >
